@@ -186,7 +186,7 @@ namespace Wms24.Web.Api.TestApp_v0_9
                 //Generate fake data -----------------------------
                 Random random = new Random();
                 var ownerIndex = random.Next(owners.Count());
-                var ownerToken = owners[0].Token;
+                var ownerToken = owners[ownerIndex].Token;
 
                 var serviceIndex = random.Next(services.Count());
                 var service = services[serviceIndex];
