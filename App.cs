@@ -213,6 +213,7 @@ namespace Wms24.Web.Api.TestApp_v0_9
                                     .RuleFor(x => x.OwnerToken, ownerToken)
                                     .RuleFor(x => x.Priority, f => f.Random.Number(1, 10))
                                     .RuleFor(x => x.WantInvoice, false)
+                                    .RuleFor(x => x.Currency, "PLN")
                                     .RuleFor(x => x.CreationDate, f => DateTime.Now.AddSeconds(-f.Random.Number(1, 10000)))
                                     .RuleFor(x => x.Items, f => xOrderItemsFaker.Generate(f.Random.Number(1, 3)).ToList())
                                     .RuleFor(x => x.ReceiverAddress, f => xAddressFaker.Generate(1).First())
